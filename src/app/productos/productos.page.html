@@ -6,6 +6,8 @@
   </ion-toolbar>
 </ion-header>
 
+<app-sidebar></app-sidebar>
+
 <ion-content [fullscreen]="true">
   <!-- <ion-header collapse="condense">
     <ion-toolbar>
@@ -18,7 +20,7 @@
     <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
   </div> -->
 
-  <ion-item>
+  <!-- <ion-item>
     <ion-label position="fixed">Fixed Label</ion-label>
     <ion-input [(ngModel)]= "nombre" ngDefaultControl></ion-input>
   </ion-item>
@@ -43,6 +45,23 @@
   <ion-item>
     <ion-label position="fixed">Fixed Label</ion-label>
     <ion-input></ion-input>
-  </ion-item>
+  </ion-item> -->
+
+  <ion-grid>
+    <ion-row>
+      <ion-col sizeMd="4" offsetMd="4">
+        <ion-list>
+          <ion-item *ngFor="let p of productos">
+            <ion-avatar slot="start">
+              <!-- <img src="{{ character.image }}" alt=""> -->
+            </ion-avatar>
+            <ion-label>{{ p.Name }}</ion-label>
+          </ion-item>
+        </ion-list>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  
 
 </ion-content>

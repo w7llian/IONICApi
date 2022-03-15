@@ -23,6 +23,10 @@ const routes: Routes = [
     path: 'profile/:id',
     loadChildren: () => import('./profile/profile.module').then( m => m.ProfilePageModule)
   },
+  {
+    path: 'sidebar',
+    loadChildren: () => import('./sidebar/sidebar.module').then( m => m.SidebarPageModule)
+  },
 ];
 
 @NgModule({
